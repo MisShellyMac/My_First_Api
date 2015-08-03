@@ -1,8 +1,27 @@
 <h1>Weather for <%= @city %></h1>
 <div>
-  The current temperature is <%= @current_temperature %>.
+  The current temperature is <%= @current_temperature %> &#8457;
   <br>
-  There are <%= @number_of_clouds %> clouds in the sky.
+  The wind speed is currently <%= @wind_speed %> mph.
+  <br>
+  The humidity is currently <%= @humidity %>%
+  <br>
+</div>
+<div>
+  Your Weather Forecast:
+  <br>
+  <% @forecast.each do |value|%>
+  <%= value %>
+  <br>
+  <% end %>
+</div>
+<div>
+  Your <%= @cnt %> Day Weather Forecast:
+  <br>
+  <% @forecast.each do |value|%>
+  <%= value %>
+  <br>
+  <% end %>
 </div>
 
 <br>
