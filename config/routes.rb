@@ -3,8 +3,9 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
-
+   root 'weather#index'
+   post '/w' => 'weather#city_redirect', as: 'city_redirect'
+   get  '/:city' => 'weather#city', as: 'city'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
